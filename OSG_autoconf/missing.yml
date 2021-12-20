@@ -1,0 +1,102 @@
+Clarkson-ACRES:
+  hosted-ce37.opensciencegrid.org:
+    BEST_FIT:
+      DEFAULT_ENTRY:
+        attrs:
+          GLIDEIN_CPUS:
+            value: 40
+          GLIDEIN_MaxMemMBs:
+            value: 125952
+          GLIDEIN_Max_Walltime:
+            value: 171000
+          GLIDEIN_ResourceName:
+            value: Clarkson-ACRES
+          GLIDEIN_Site:
+            value: Clarkson-ACRES
+        gridtype: condor
+        submit_attrs:
+          +maxMemory: 125952
+          +maxWallTime: 2880
+          +xcount: 40
+NEMO:
+  uwm-nemo-ce1.svc.opensciencegrid.org:
+    BEST_FIT:
+      DEFAULT_ENTRY:
+        attrs:
+          GLIDEIN_CPUS:
+            value: 16
+          GLIDEIN_MaxMemMBs:
+            value: 163840
+          GLIDEIN_Max_Walltime:
+            value: 171000
+          GLIDEIN_ResourceName:
+            value: NEMO
+          GLIDEIN_Site:
+            value: NEMO
+        gridtype: condor
+        submit_attrs:
+          +maxMemory: 163840
+          +maxWallTime: 2880
+          +xcount: 16
+PSU-LIGO:
+  psu-ligo-ce1.svc.opensciencegrid.org:
+    BEST_FIT:
+      DEFAULT_ENTRY:
+        attrs:
+          GLIDEIN_CPUS:
+            value: 4
+          GLIDEIN_MaxMemMBs:
+            value: 8192
+          GLIDEIN_Max_Walltime:
+            value: 84600
+          GLIDEIN_ResourceName:
+            value: PSU-LIGO
+          GLIDEIN_Site:
+            value: PSU-LIGO
+        gridtype: condor
+        submit_attrs:
+          +maxMemory: 8192
+          +maxWallTime: 1440
+          +xcount: 4
+SDSC-Triton_Stratus:
+  sdsc-ts-ce1.svc.opensciencegrid.org:
+    BEST_FIT:
+      DEFAULT_ENTRY:
+        attrs:
+          GLIDEIN_CPUS:
+            value: 36
+          GLIDEIN_MaxMemMBs:
+            value: 179200
+          GLIDEIN_Max_Walltime:
+            value: 171000
+          GLIDEIN_ResourceName:
+            value: SDSC-Triton_Stratus
+          GLIDEIN_Site:
+            value: SDSC-Triton_Stratus
+          GLIDEIN_Supported_VOs:
+            value: OSGVO
+        gridtype: condor
+        submit_attrs:
+          +maxMemory: 179200
+          +maxWallTime: 2880
+          +xcount: 36
+UIUC-ICC-SPT:
+  uiuc-icc-spt-ce1.svc.opensciencegrid.org:
+    BEST_FIT:
+      DEFAULT_ENTRY:
+        attrs:
+          GLIDEIN_CPUS:
+            value: 8
+          GLIDEIN_MaxMemMBs:
+            value: 10240
+          GLIDEIN_Max_Walltime:
+            value: 34200
+          GLIDEIN_ResourceName:
+            value: UIUC-ICC-SPT
+          GLIDEIN_Site:
+            value: UIUC-ICC-SPT
+        gridtype: condor
+        submit_attrs:
+          +maxMemory: 10240
+          +maxWallTime: 600
+          +xcount: 8
