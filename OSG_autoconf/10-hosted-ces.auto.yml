@@ -583,19 +583,6 @@ TACC-Stampede2:
             value: skx-normal
 
 
-SDSC-Triton_Stratus:
-  sdsc-ts-ce1.svc.opensciencegrid.org:
-    BEST_FIT:
-      OSG_US_SDSC-Triton_Stratus:
-        limits:
-          entry:
-            glideins: 24
-        submit_attrs:
-          +queue: "&quot;osg&quot;"
-        attrs:
-            GLIDEIN_ResourceName:
-              value: SDSC-TS-CE1
-
 ELSA:
 #  hosted-ce30.opensciencegrid.org:
   tcnj-elsa-ce1.svc.opensciencegrid.org:
