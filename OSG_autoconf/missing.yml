@@ -80,3 +80,23 @@ UIUC-ICC-SPT:
           +maxMemory: 10240
           +maxWallTime: 600
           +xcount: 8
+USF:
+  hosted-ce18.opensciencegrid.org:
+    BEST_FIT:
+      DEFAULT_ENTRY:
+        attrs:
+          GLIDEIN_CPUS:
+            value: 12
+          GLIDEIN_MaxMemMBs:
+            value: 48000
+          GLIDEIN_Max_Walltime:
+            value: 84600
+          GLIDEIN_ResourceName:
+            value: USF
+          GLIDEIN_Site:
+            value: USF
+        gridtype: condor
+        submit_attrs:
+          +maxMemory: 48000
+          +maxWallTime: 1440
+          +xcount: 12
