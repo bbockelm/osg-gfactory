@@ -1,0 +1,266 @@
+<glidein advertise_delay="1" advertise_with_multiple="True" advertise_with_tcp="True" entry_parallel_workers="16" factory_name="OSG" glidein_name="gfactory_instance" loop_delay="60" restart_attempts="3" restart_interval="1800" schedd_name="schedd_glideins1@gfactory-2.opensciencegrid.org,schedd_glideins2@gfactory-2.opensciencegrid.org,schedd_glideins3@gfactory-2.opensciencegrid.org,schedd_glideins4@gfactory-2.opensciencegrid.org,schedd_glideins5@gfactory-2.opensciencegrid.org,schedd_glideins6@gfactory-2.opensciencegrid.org,schedd_glideins7@gfactory-2.opensciencegrid.org,schedd_glideins8@gfactory-2.opensciencegrid.org,schedd_glideins9@gfactory-2.opensciencegrid.org" factory_versioning="False">
+   <log_retention>
+      <condor_logs max_days="14.0" max_mbytes="100.0" min_days="3.0"/>
+      <job_logs max_days="7.0" max_mbytes="100.0" min_days="3.0"/>
+      <summary_logs max_days="31.0" max_mbytes="100.0" min_days="3.0"/>
+      <process_logs>
+		<process_log extension="info" max_days="7.0" max_mbytes="100.0" min_days="3.0" msg_types="INFO"/>
+		<process_log extension="err" max_days="7.0" max_mbytes="100.0" min_days="3.0" msg_types="DEBUG,ERR,WARN,EXCEPTION"/>
+      </process_logs>
+   </log_retention>
+   <monitor base_dir="/var/lib/gwms-factory/web-area/monitor" flot_dir="/usr/share/javascriptrrd/flot" javascriptRRD_dir="/usr/share/javascriptrrd/js" jquery_dir="/usr/share/javascriptrrd/flot" update_thread_count="16"/>
+   <monitor_footer display_txt="" href_link=""/>
+   <security key_length="2048" pub_key="RSA" remove_old_cred_age="30" remove_old_cred_freq="24" reuse_oldkey_onstartup_gracetime="900">
+      <frontends>
+         <frontend name="UCSDOSG-itb" identity="feucsditb@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="feucsditb"/>
+            </security_classes>
+         </frontend>
+         <frontend name="CMS_T0-Frontend" identity="fecmscernt0@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="cmspilot" username="fecmscernt0"/>
+            </security_classes>
+         </frontend>
+         <frontend name="fecmst0backup" identity="fecmst0backup@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="cmspilot" username="fecmst0backup"/>
+            </security_classes>
+         </frontend>
+         <frontend name="CMSG-v1_0" identity="fecmsglobal@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="cmspilot" username="fecmsglobal"/>
+            </security_classes>
+         </frontend>
+         <frontend name="fecmsglobalbackup" identity="fecmsglobalbackup@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="cmspilot" username="fecmsglobalbackup"/>
+            </security_classes>
+         </frontend>
+         <frontend name="UCSDCMS" identity="fecmsucsd@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="cmspilot" username="fecmsucsd"/>
+            </security_classes>
+         </frontend>
+         <frontend name="gpfrontend01" identity="gpfrontend01@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fefermifife"/>
+            </security_classes>
+         </frontend>
+         <frontend name="gpfrontend02" identity="gpfrontend02@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fefermifife"/>
+            </security_classes>
+         </frontend>
+         <frontend name="vo-frontend-glow" identity="feglow@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="feglow"/>
+            </security_classes>
+         </frontend>
+         <frontend name="vo-frontend-glow-itb" identity="feglowitb@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="feglowitb"/>
+            </security_classes>
+         </frontend>
+         <frontend name="hcc-glidein" identity="unlfe@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fehcc"/>
+            </security_classes>
+         </frontend>
+         <frontend name="hepcloudFEsrv266" identity="hepcloudFEsrv266@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="hepcloudFEsrv266"/>
+            </security_classes>
+         </frontend>
+         <frontend name="hepcloudDEsvc03" identity="hepcloudDEsvc03@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fehepclouddev"/>
+            </security_classes>
+         </frontend>
+         <frontend name="gpde01" identity="gpde01@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="gpde01"/>
+            </security_classes>
+         </frontend>
+         <frontend name="LIGO" identity="feligo@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="feligo"/>
+            </security_classes>
+         </frontend>
+         <frontend name="nanoHUB" identity="fenanohub@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fenanohub"/>
+            </security_classes>
+         </frontend>
+         <frontend name="nanoHUB-itb" identity="fenanohubitb@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fenanohubitb"/>
+            </security_classes>
+         </frontend>
+         <frontend name="OSG_Flock" identity="feosgflock@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="feosgflock"/>
+            </security_classes>
+         </frontend>
+         <frontend name="UCLHC" identity="feuclhc@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="feuclhc"/>
+            </security_classes>
+         </frontend>
+         <frontend name="GluexVO" identity="fegluex@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fegluex"/>
+            </security_classes>
+         </frontend>
+         <frontend name="OSG_BNL" identity="feosgbnl@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="feosgbnl"/>
+            </security_classes>
+         </frontend>
+         <frontend name="gwms_itb" identity="fefermififeitb@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fefermififeitb"/>
+            </security_classes>
+         </frontend>
+         <frontend name="fermilab_okd_gpfe01" identity="fefermilab@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fefermilab"/>
+            </security_classes>
+         </frontend>
+         <frontend name="jlab" identity="fejlab@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fejlab"/>
+            </security_classes>
+         </frontend>
+         <frontend name="hepcloudDE117" identity="hepcloudDE117@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fehepcloudDE117"/>
+            </security_classes>
+         </frontend>
+         <frontend name="hepcloudDE155" identity="hepcloudDE155@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fehepcloudDE155"/>
+            </security_classes>
+         </frontend>
+         <frontend name="OSG_OSPool" identity="feosgospool@gfactory-2.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="feosgospool"/>
+            </security_classes>
+         </frontend>
+         <frontend name="okd-duneglobalfe01" identity="okd-duneglobalfe01@gfactory-itb-1.opensciencegrid.org">
+            <security_classes>
+               <security_class name="frontend" username="fedune"/>
+            </security_classes>
+         </frontend>
+      </frontends>
+   </security>
+   <stage base_dir="/var/lib/gwms-factory/web-area/stage" use_symlink="True" web_base_url="http://gfactory-2.opensciencegrid.org/factory/stage"/>
+   <submit base_client_log_dir="/var/log/gwms-factory/client" base_client_proxies_dir="/var/lib/gwms-factory/client-proxies" base_dir="/var/lib/gwms-factory/work-dir" base_log_dir="/var/log/gwms-factory/server"/>
+   <attrs>
+      <attr comment="should no longer be needed but a CMS script depends on it, putting back in SDSC until they fix their script 2017-12-15 --Jeff" name="GLIDEIN_CPUS" const="True" glidein_publish="False" job_publish="True" parameter="True" publish="True" type="string" value="1"/>
+      <attr name="CONDOR_ARCH" const="False" glidein_publish="False" job_publish="False" parameter="True" publish="True" type="string" value="default"/>
+      <attr name="CONDOR_OS" const="False" glidein_publish="False" job_publish="False" parameter="True" publish="True" type="string" value="default"/>
+      <attr name="CONDOR_VERSION" const="False" glidein_publish="False" job_publish="False" parameter="True" publish="True" type="string" value="default"/>
+      <attr name="FactoryType" const="True" glidein_publish="True" job_publish="False" parameter="True" publish="True" type="string" value="production"/>
+      <attr name="GCB_ORDER" const="True" glidein_publish="True" job_publish="False" parameter="True" publish="True" type="string" value="NONE"/>
+      <attr name="GLIDEIN_Glexec_Use" const="False" glidein_publish="True" job_publish="False" parameter="True" publish="True" type="string" value="NEVER"/>
+      <attr name="GLIDEIN_Job_Max_Time" const="False" glidein_publish="False" job_publish="False" parameter="True" publish="True" type="int" value="34800"/>
+      <attr name="GLIDEIN_MaxMemMBs" const="True" glidein_publish="True" job_publish="False" parameter="True" publish="True" type="int" value="2500"/>
+      <attr name="GLIDEIN_Monitoring_Enabled" const="False" glidein_publish="True" job_publish="True" parameter="True" publish="True" type="string" value="False"/>
+      <attr name="GLIDEIN_REQUIRED_OS" const="True" glidein_publish="True" job_publish="False" parameter="True" publish="True" type="string" value="rhel6"/>
+      <attr name="GLIDEIN_Req_MUPJ_gLExec" const="True" glidein_publish="True" job_publish="False" parameter="False" publish="True" type="string" value="False"/>
+      <attr name="GLIDEIN_Retire_Time_Spread" const="True" glidein_publish="False" job_publish="False" parameter="True" publish="True" type="int" value="1200"/>
+      <attr name="GLIDEIN_SINGULARITY_REQUIRE" const="True" glidein_publish="False" job_publish="False" parameter="True" publish="True" type="string" value="OPTIONAL"/>
+      <attr name="GSI_DELEGATION_KEYBITS" const="True" glidein_publish="True" job_publish="False" parameter="True" publish="True" type="int" value="1024"/>
+      <attr name="MIN_DISK_GBS" const="False" glidein_publish="False" job_publish="False" parameter="True" publish="True" type="int" value="1"/>
+      <attr name="Site_Req_Explicit_Auth" const="True" glidein_publish="True" job_publish="False" parameter="False" publish="True" type="string" value="False"/>
+      <attr name="UPDATE_COLLECTOR_WITH_TCP" const="False" glidein_publish="False" job_publish="False" parameter="True" publish="True" type="string" value="True"/>
+      <attr name="USE_CCB" const="True" glidein_publish="True" job_publish="False" parameter="True" publish="True" type="string" value="True"/>
+      <attr name="USE_MATCH_AUTH" const="False" glidein_publish="False" job_publish="False" parameter="True" publish="True" type="string" value="True"/>
+      <attr name="VOS_USING_SE_BASEPATH" const="True" glidein_publish="True" job_publish="True" parameter="True" publish="True" type="string" value=""/>
+      <attr name="VOS_USING_SE_OTHER_SUBDIR" const="True" glidein_publish="True" job_publish="True" parameter="True" publish="True" type="string" value=""/>
+      <attr name="VOS_USING_SE_VONAME_LOWERCASE" const="True" glidein_publish="True" job_publish="True" parameter="True" publish="True" type="string" value=""/>
+   </attrs>
+   <entries>
+   </entries>
+   <condor_tarballs>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/condor-9.1.4-20210825-x86_64_CentOS7-stripped.tar.gz" version="9.1.4,9.1.x"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/condor-9.1.4-20210825-x86_64_CentOS8-stripped.tar.gz" version="9.1.4,9.1.x"/>
+      <condor_tarball arch="default" os="ubuntu20,linux-ubuntu20" tar_file="/var/lib/gwms-factory/condor/condor-9.1.4-20210825-x86_64_Ubuntu18-stripped.tar.gz" version="9.1.4,9.1.x"/>
+      <condor_tarball arch="default" os="ubuntu18,linux-ubuntu18" tar_file="/var/lib/gwms-factory/condor/condor-9.1.4-20210825-x86_64_Ubuntu20-stripped.tar.gz" version="9.1.4,9.1.x"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.1-condor-8.8.12-x86_64_CentOS6-stripped.tar.gz" version="9.1.4,9.1.x"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/condor-9.1.3-x86_64_CentOS7-stripped.tar.gz" version="9.1.3"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/condor-9.1.3-x86_64_CentOS8-stripped.tar.gz" version="9.1.3"/>
+      <condor_tarball arch="default" os="ubuntu20,linux-ubuntu20" tar_file="/var/lib/gwms-factory/condor/condor-9.1.3-x86_64_Ubuntu20-stripped.tar.gz" version="9.1.3"/>
+      <condor_tarball arch="default" os="ubuntu18,linux-ubuntu18" tar_file="/var/lib/gwms-factory/condor/condor-9.1.3-x86_64_Ubuntu18-stripped.tar.gz" version="9.1.3"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.1-condor-8.8.12-x86_64_CentOS6-stripped.tar.gz" version="9.1.3"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/condor-9.1.1-x86_64_CentOS7-stripped.tar.gz" version="9.1.1"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/condor-9.1.1-x86_64_CentOS8-stripped.tar.gz" version="9.1.1"/>
+      <condor_tarball arch="default" os="ubuntu20,linux-ubuntu20" tar_file="/var/lib/gwms-factory/condor/condor-9.1.1-x86_64_Ubuntu20-stripped.tar.gz" version="9.1.1"/>
+      <condor_tarball arch="default" os="ubuntu18,linux-ubuntu18" tar_file="/var/lib/gwms-factory/condor/condor-9.1.1-x86_64_Ubuntu18-stripped.tar.gz" version="9.1.1"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.1-condor-8.8.12-x86_64_CentOS6-stripped.tar.gz" version="9.1.1"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/condor-9.0.7-x86_64_CentOS8-stripped.tar.gz" version="9.0.7"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/condor-9.0.7-x86_64_CentOS7-stripped.tar.gz" version="9.0.7"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/condor-9.0.6-x86_64_CentOS8-stripped.tar.gz" version="9.0.6"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/condor-9.0.6-x86_64_CentOS7-stripped.tar.gz" version="9.0.6"/>
+      <condor_tarball arch="default" os="ubuntu20,linux-ubuntu20" tar_file="/var/lib/gwms-factory/condor/condor-9.0.6-x86_64_Ubuntu20-stripped.tar.gz" version="9.0.6"/>
+      <condor_tarball arch="default" os="ubuntu18,linux-ubuntu18" tar_file="/var/lib/gwms-factory/condor/condor-9.0.6-x86_64_Ubuntu18-stripped.tar.gz" version="9.0.6"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/condor-9.0.5-x86_64_CentOS7-stripped.tar.gz" version="9.0.5,9.0.x"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/condor-9.0.5-x86_64_CentOS8-stripped.tar.gz" version="9.0.5,9.0.x"/>
+      <condor_tarball arch="default" os="ubuntu20,linux-ubuntu20" tar_file="/var/lib/gwms-factory/condor/condor-9.0.5-x86_64_Ubuntu20-stripped.tar.gz" version="9.0.5,9.0.x"/>
+      <condor_tarball arch="default" os="ubuntu18,linux-ubuntu18" tar_file="/var/lib/gwms-factory/condor/condor-9.0.5-x86_64_Ubuntu18-stripped.tar.gz" version="9.0.5,9.0.x"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.1-condor-8.8.12-x86_64_CentOS6-stripped.tar.gz" version="9.0.5,9.0.x"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.1-condor-8.8.12-x86_64_CentOS6-stripped.tar.gz" version="9.0.1"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/condor-9.0.1-x86_64_CentOS7-stripped.tar.gz" version="9.0.1"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/condor-9.0.1-x86_64_CentOS8-stripped.tar.gz" version="9.0.1"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.2-condor-9.0.0-x86_64_CentOS7-stripped.tar.gz" version="9.0.0"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.2-condor-9.0.0-x86_64_CentOS8-stripped.tar.gz" version="9.0.0"/>
+      <condor_tarball arch="default" os="ubuntu20,linux-ubuntu20" tar_file="/var/lib/gwms-factory/condor/condor-9.0.0-x86_64_Ubuntu20-stripped.tar.gz" version="9.0.0"/>
+      <condor_tarball arch="default" os="ubuntu18,linux-ubuntu18" tar_file="/var/lib/gwms-factory/condor/condor-9.0.0-x86_64_Ubuntu18-stripped.tar.gz" version="9.0.0"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.1-condor-8.8.12-x86_64_CentOS6-stripped.tar.gz" version="9.0.0"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.4-condor-8.9.13-x86_64_CentOS7-stripped.tar.gz" version="8.9.13"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.4-condor-8.9.13-x86_64_CentOS8-stripped.tar.gz" version="8.9.13"/>
+      <condor_tarball arch="default" os="ubuntu18,linux-ubuntu18" tar_file="/var/lib/gwms-factory/condor/condor-8.9.13-x86_64_Ubuntu18-stripped.tar.gz" version="8.9.13,8.9.x,default"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.2-condor-8.9.11-x86_64_CentOS7-stripped.tar.gz" version="8.9.11,8.9.x"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.2-condor-8.9.11-x86_64_CentOS8-stripped.tar.gz" version="8.9.11,8.9.x,default"/>
+      <condor_tarball arch="default" os="ubuntu20,linux-ubuntu20" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.2-condor-8.9.11-x86_64_Ubuntu20-stripped.tar.gz" version="8.9.11,8.9.x,default"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.1-condor-8.8.12-x86_64_CentOS6-stripped.tar.gz" version="8.8.12,8.8.x,default"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.1-condor-8.8.12-x86_64_CentOS7-stripped.tar.gz" version="8.8.12,8.8.x,default"/>
+      <condor_tarball arch="default" os="rhel8,linux-rhel8" tar_file="/var/lib/gwms-factory/condor/gfactory-3.7.3-condor-8.8.12-x86_64_CentOS8-stripped.tar.gz" version="8.8.12,8.8.x"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.6.1-condor-8.8.8-x86_64_RedHat6-stripped.tar.gz" version="8.9.6,8.9.x"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.6.2-condor-8.8.10-x86_64_RedHat6-stripped.tar.gz" version="8.8.10"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.6.2-condor-8.8.10-x86_64_CentOS7-stripped.tar.gz" version="8.8.10"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.6.1-condor-8.8.8-x86_64_RedHat6-stripped.tar.gz" version="8.8.8"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.6.1-condor-8.8.8-x86_64_RedHat7-stripped.tar.gz" version="8.8.8"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.6.1-1-condor-8.8.7-x86_64_RedHat6-stripped.tar.gz" version="8.8.7"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.6.1-1-condor-8.8.7-x86_64_RedHat7-stripped.tar.gz" version="8.8.7"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4.5-2-condor-8.8.6-x86_64_RedHat6-stripped.tar.gz" version="8.8.6"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4.5-2-condor-8.8.6-x86_64_RedHat7-stripped.tar.gz" version="8.8.6"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4.5-2-condor-8.8.5-x86_64_RedHat6-stripped.tar.gz" version="8.8.5"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4.5-2-condor-8.8.5-x86_64_RedHat7-stripped.tar.gz" version="8.8.5"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4.2-1-condor-8.8.2-x86_64_RedHat6-stripped.tar.gz" version="8.8.2"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4.2-1-condor-8.8.2-x86_64_RedHat7-stripped.tar.gz" version="8.8.2"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4-condor-8.7.9-x86_64_RedHat6-stripped.tar.gz" version="8.7.9,8.7.x"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4-condor-8.7.9-x86_64_RedHat7-stripped.tar.gz" version="8.7.9,8.7.x"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4-condor-8.6.12-x86_64_RedHat6-stripped.tar.gz" version="8.6.12,8.6.x"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.4-condor-8.6.12-x86_64_RedHat7-stripped.tar.gz" version="8.6.12,8.6.x"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.2.22-condor-8.6.5-x86_64_RedHat6-stripped.tar.gz" version="8.6.5"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.2.22-condor-8.6.5-x86_64_RedHat7-stripped.tar.gz" version="8.6.5"/>
+      <condor_tarball arch="default" os="default,linux-rhel6" tar_file="/var/lib/gwms-factory/condor/gfactory-3.2.22-condor-8.6.3-x86_64_RedHat6-stripped.tar.gz" version="8.6.3"/>
+      <condor_tarball arch="default" os="rhel7,linux-rhel7" tar_file="/var/lib/gwms-factory/condor/gfactory-3.2.22-condor-8.6.3-x86_64_RedHat7-stripped.tar.gz" version="8.6.3"/>
+   </condor_tarballs>
+   <files>
+      <file absfname="/etc/gwms-factory/sethome.source" after_entry="False" const="True" executable="False" period="0" untar="False" wrapper="True">
+         <untar_options cond_attr="TRUE"/>
+      </file>
+      <file absfname="/etc/gwms-factory/test_os.sh" after_entry="True" const="True" executable="True" period="0" untar="False" wrapper="False">
+         <untar_options cond_attr="TRUE"/>
+      </file>
+      <file absfname="/etc/gwms-factory/define_OSG_SE.sh" after_entry="True" const="True" executable="True" period="0" untar="False" wrapper="False">
+         <untar_options cond_attr="TRUE"/>
+      </file>
+      <file absfname="/etc/gwms-factory/smart_partitionable_rc.sh" after_entry="True" const="True" executable="True" period="0" untar="False" wrapper="False">
+         <untar_options cond_attr="TRUE"/>
+      </file>
+   </files>
+</glidein>
