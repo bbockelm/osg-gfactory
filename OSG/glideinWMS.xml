@@ -182,16 +182,16 @@
       <attr name="VOS_USING_SE_VONAME_LOWERCASE" const="True" glidein_publish="True" job_publish="True" parameter="True" publish="True" type="string" value=""/>
    </attrs>
    <files>
-      <file absfname="/opt/osg-factory/OSG/scripts/sethome.source" after_entry="False" const="True" executable="False" period="0" untar="False" wrapper="True">
+      <file absfname="/opt/osg-gfactory/OSG/scripts/sethome.source" after_entry="False" const="True" executable="False" period="0" untar="False" wrapper="True">
          <untar_options cond_attr="TRUE"/>
       </file>
-      <file absfname="/opt/osg-factory/OSG/scripts/test_os.sh" after_entry="True" const="True" executable="True" period="0" untar="False" wrapper="False">
+      <file absfname="/opt/osg-gfactory/OSG/scripts/test_os.sh" after_entry="True" const="True" executable="True" period="0" untar="False" wrapper="False">
          <untar_options cond_attr="TRUE"/>
       </file>
-      <file absfname="/opt/osg-factory/OSG/scripts/define_OSG_SE.sh" after_entry="True" const="True" executable="True" period="0" untar="False" wrapper="False">
+      <file absfname="/opt/osg-gfactory/OSG/scripts/define_OSG_SE.sh" after_entry="True" const="True" executable="True" period="0" untar="False" wrapper="False">
          <untar_options cond_attr="TRUE"/>
       </file>
-      <file absfname="/opt/osg-factory/OSG/scripts/smart_partitionable_rc.sh" after_entry="True" const="True" executable="True" period="0" untar="False" wrapper="False">
+      <file absfname="/opt/osg-gfactory/OSG/scripts/smart_partitionable_rc.sh" after_entry="True" const="True" executable="True" period="0" untar="False" wrapper="False">
          <untar_options cond_attr="TRUE"/>
       </file>
    </files>
